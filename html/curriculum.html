@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="..//styles/curriculum.css">
+    <link href="../styles/curriculum.css" media="print" rel="stylesheet"/>
+    <title>Isabelly Ercole - Dev Junior</title>
+    <style>
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <img
+        src="../img/portrait-enhanced-2.png"
+        alt="Isabelly's profile picture"
+      />
+      <section>
+        <h1>Isabelly Ercole</h1>
+        <h2>Dev Junior</h2>
+      </section>
+      <section>
+          <button id="download" type="button" class="btn-style701" data-toggle="button" aria-pressed="false" autocomplete="off"> 
+            Baixar PDF
+          </button>
+      </section>
+    </div>
+
+    <h3>Contact</h3>
+    <ul>
+      <li>São Paulo, SP</li>
+      <li>isabellyercole@gmail.com</li>
+      <li>
+        <a href="https://github.com/IsaErcole" target="_blank">GitHub</a>
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/isabelly-ercole-968201209/"
+          target="_blank" download="https://isaercole.github.io/My-Portifolio/html/curriculum.html"
+          >LinkedIn</a
+        >
+      </li>
+    </ul>
+
+    <h3>About me</h3>
+    <p>
+      I graduated in Veterinary Medicine in 2025 and am currently expanding my professional horizons by studying Web Development.
+      I strive to combine analytical skills with continuous learning to contribute across healthcare and tech environments.
+    </p>
+
+    <h3>Experience</h3>
+    <ul>
+      <li>
+        Graduated in Veterinary Medicine
+        <strong>(2021 - 2025)</strong>
+      </li>
+      <ul>
+        <li>During my academic training, I completed internships in small animal clinical practice, hospitalization, laboratory work, and physiotherapy.</li>
+      </ul>
+    </ul>
+    <h3>Idiomas</h3>
+    <ul>
+      <li>Portuguese <strong>(Native)</strong></li>
+      <li>English <strong>(Intermediate level)</strong></li>
+    </ul>
+
+    <h3>Education</h3>
+    <ul>
+      <li>Studying Deve Development (Alura) <strong>(2024 - Today)</strong></li>
+      <li>
+        Bachelor's Degree in Veterinary Medicine (UNG)
+        <strong>(2021 - 2025)</strong>
+      </li>
+      <li>
+        High School (UNINOVE)
+        <strong>(2018 - 2020)</strong>
+      </li>
+      <li>
+        Elementary School (Colégio Machado Coelho)
+        <strong>(2008 - 2017)</strong>
+      </li>
+    </ul>
+
+    <h3>Skills</h3>
+    <ul>
+      <li>HTML <strong>(Intermediate level)</strong></li>
+      <li>CSS <strong>(Intermediate level)</strong></li>
+      <li>JavaScript <strong>(Basic level)</strong></li>
+    </ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script>
+      document.getElementById("download").addEventListener("click", async () => {
+        const element = document.body;
+        
+        // Cria um clone do elemento para não afetar a página original
+        const cloneElement = element.cloneNode(true);
+        
+        // Adiciona classe ao clone
+        cloneElement.classList.add('pdf-mode');
+        
+        // Cria um container invisível e adiciona o clone
+        const tempDiv = document.createElement('div');
+        tempDiv.style.display = 'none';
+        tempDiv.appendChild(cloneElement);
+        document.body.appendChild(tempDiv);
+        
+        // Aguarda um pouco para os estilos serem aplicados
+        await new Promise(resolve => setTimeout(resolve, 100));
+
+        const options = {
+          margin:       0.2,
+          filename:     'curriculum-IsaErcole.pdf',
+          image:        { type: 'png', quality: 1 },
+          html2canvas:  { scale: 2, useCORS: true, allowTaint: true, backgroundColor: '#ffffff' },
+          jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+        };
+
+        // Gera PDF do clone
+        await html2pdf().set(options).from(cloneElement).save();
+        
+        // Remove o clone e seu container
+        tempDiv.remove();
+      });
+    </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,274 @@
+.knowledge-tittle {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--branco);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-top: 2em;
+}
+
+.knowledge-subtittle {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--rosa-claro);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 4em;
+}
+
+#Knowledge h2:before,
+#Knowledge h2:after {
+    content: '';
+    border-top: 2px solid var(--roxo-escuro);
+    margin: 0 20px 0 20px;
+    flex: 1 0 20px;
+}
+
+.container {
+    position: relative;
+    max-width: 440px;
+    margin: auto;  
+    padding-top: 2em;  
+}
+
+.wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.item {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.item.active .label {
+  opacity: 1; 
+}
+
+
+svg {
+    height: 200px;
+    overflow: visible;
+    width: 200px;
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.st0 {
+  fill: none; /* sem preenchimento */
+  stroke: var(--roxo-claro); /* cor da borda */
+  stroke-width: 2; /* espessura da linha */
+  stroke-dasharray: 10; /* define o padrão tracejado */
+}
+
+.start {
+    position: absolute;
+    top: 50%;
+    right: -30px;
+}
+
+#prev, #next {
+    background: transparent;
+    border: none;
+    padding: 8px;            
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: inherit; 
+}
+
+.left-arrow, .right-arrow {
+    display: block;
+    width: 28px;
+    height: 28px;
+    pointer-events: none;
+}
+
+.knowledge-paragraph {
+  color: var(--branco);
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: justify;
+  max-width: 300px;
+  margin: 1.5em auto 0;
+}
+
+.container-apps {
+    border: 2px dashed var(--roxo-claro);
+    border-radius: 29px;
+    width: 370px;
+    height: 200px;
+
+    margin: 2em auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.apps-paragraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    max-width: 190px;
+    margin: 0 0 12px 0;
+    color: var(--rosa-claro);
+    font-size: 14px;
+}
+
+.apps-imgs {
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.vertical-line {
+    border: 2px solid var(--roxo-claro);
+    height: 70%;
+    border-radius: 10px;
+    margin: 1em;
+}
+
+.item-desktop {
+    display: none;
+}
+
+.app-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .knowledge-tittle{
+        font-size: 48px;
+    }
+
+
+    .knowledge-subtittle {
+        font-size: 32px;
+        justify-content: center;
+        margin: 1em 0 7em 0;
+    }
+
+    #Knowledge h2:before,
+    #Knowledge h2:after {
+        border-top: 7px solid var(--roxo-escuro);
+    }
+
+    .knowledge-all {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7em;
+        margin-left: 15em;
+    }
+
+    svg {
+        width: 473px;
+        height: 431px;
+    }
+
+    .container {
+        margin: 0;
+        max-width: 473px;
+    }
+
+    .wrapper {
+        width: 473px;
+        height: 431px; /* match svg height to keep motionPath alignment */
+    }
+
+    /* restore item layout for desktop */
+    .item {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 60px;
+        height: 60px;
+    }
+
+    .left-arrow, .right-arrow {
+        width: 48px;
+        height: auto;
+        margin-top: 10em;
+    }
+
+    .container-buttons {
+        height: 250px;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+    }
+
+    .knowledge-paragraph {
+        font-size: 24px;
+        max-width: 628px;
+        height: auto;
+        margin-right: 2em;
+    }
+
+    .item-mobile {
+        display: none;
+    }
+
+    .item-desktop {
+        display: flex;
+        position: relative;
+        right: 50%;
+        bottom: 35%;
+    }
+
+    .apps-paragraph {
+        font-size: 24px;
+        max-width: 341px;
+        margin-bottom: 2em;
+    }
+
+    .container-apps {
+        width: 683px;
+        height: 401px;
+    }
+
+    .app-mobile {
+        display: none;
+    }
+
+    .app-desktop {
+        display: flex;
+    }
+
+    .vertical-line {
+        height: 80%;
+    }
+
+    .apps-imgs {
+        gap: 3em;
+    }
+
+    .container-apps {
+        border: 4px dashed var(--roxo-claro);
+        margin-top: 5em;
+    }
+}

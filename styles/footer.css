@@ -1,0 +1,41 @@
+.footer {
+    height: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    max-width: 244px;
+    color: var(--rosa-claro);
+    margin: 1em;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.footer p span {
+    color: var(--roxo-medio);
+}
+
+.footer img {
+    width: 50px;
+    margin: 0 1em;
+}
+
+@media screen and (min-width: 1024px) {
+    .footer {
+        height: 245px;
+    }
+
+    .footer p {
+        font-size: 32px;
+        max-width: 782px;
+    }
+
+    .footer img {
+        width: 230px;
+        height: 135px;
+        margin: 0 1em;
+    }
+}

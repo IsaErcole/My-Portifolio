@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--styles-->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/about-me.css">
+    <link rel="stylesheet" href="./styles/projects.css">
+    <link rel="stylesheet" href="./styles/Knowledge.css">
+    <link rel="stylesheet" href="./styles/contact.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+ <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!--swiper-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+<!--gsap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+
+    <title>My Portifolio</title>
+</head>
+    
+<body>
+    <header id="Home"> 
+        <div class="navbar">
+            <nav class="options">
+            <!--Navbar desktop version-->
+                <ul class="options-list">
+                    <li class="options-item"><a href="#Home">Home</a></li>
+                    <li class="options-item"><a href="#about-me">About me</a></li>
+                    <li class="options-item"><a href="#projects">Projects</a></li>
+                    <li class="options-item"><a href="#Knowledge">Knowledge</a></li>
+                    <li class="options-item"><a href="#contact">Contact</a></li>
+                    <li class="options-item"><a href="./html/curriculum.html" target="_blank">View CV</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--home section-->
+        <div class="container-header">
+            <h2 class="introduction">Hi, I am</h2>
+            <h1 class="name-tittle">Isabelly Ercole</h1>
+            <h2 class="subtittle">
+                <span id="typewriter"></span>
+            </h2>
+            <!--header image-->
+            <div>
+                <img src="./img/first-image.png" alt="web-development" class="header-image">
+                <img src="./img/first-image-desktop.png" alt="web-development" class="header-image-desktop">
+            </div>
+        </div>
+        <!--hamburguer menu-->
+        <nav class="menu-hamburger">
+            <button id="menu-btn" class="menu-btn">
+                <img src="./img/menu-hamburguer.png" alt="side-bar-img" id="menu-icon">
+            </button>
+            <ul class="side-bar" id="sidebar">
+                <li class="side-bar-tittle">Menu</li>
+                <li class="side-bar-list">
+                    <a href="#Home" class="side-bar-link">Home</a>
+                </li>
+                <li class="side-bar-list">
+                    <a href="#about-me" class="side-bar-link">About Me</a>
+                </li>
+                <li class="side-bar-list">
+                    <a href="#projects" class="side-bar-link">Projects</a>
+                </li>
+                <li class="side-bar-list">
+                    <a href="#Knowledge" class="side-bar-link">Knowledge</a>
+                </li>
+                <li class="side-bar-list">
+                    <a href="#contact" class="side-bar-link">Contact</a>
+                </li>
+                <li class="side-bar-list">
+                    <a href="./html/curriculum.html" class="side-bar-link" target="_blank">View CV</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--about me section-->
+        <section id="about-me">
+            <div class="about-me-container">
+                <h2 class="about-me-tittle">About Me</h2>
+                <p class="about-me-text">I am a Veterinary Medicine graduate and Front-End Web Developer who creates responsive web pages with attractive layouts. Currently, I am immersed in continuous learning, focusing on technologies such as HTML, CSS, and JavaScript. I am seeking opportunities in the development field and, in the near future, I aim to become a Full Stack Developer.</p>
+            </div>
+            <div class="about-me-image">
+                <img src="./img/portrait enhanced 1.png" alt="Isabelly Ercole">
+            </div>
+        </section>
+
+        <!--projects section-->
+        <section id="projects" class="projects">
+            <div class="swiper my-swiper">
+                <h2 class="projects-tittle">See some works</h2>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
+            <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="card">
+                        <h2 class="swiper-tittle">Alura +</h2>
+                        <img src="./img/alura+.png" alt="alura plus" class="img-mobile">
+                        <img src="./img/alura-plus-desktop.png" alt="alura plus" class="img-desktop">
+                        <div class="preview">
+                            <a href="https://github.com/IsaErcole/Alura-plus" target="_blank">Preview on GitHub<img src="./img/redirect.png" alt="redirect-site"></a>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <a href="https://isaercole.github.io/Alura-plus/" target="_blank">Check this project</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card">
+                        <h2 class="swiper-tittle">Alura Books</h2>
+                        <img src="./img/alura-books.png" alt="Alura Books" class="img-mobile">
+                        <img src="./img/alura-books-desktop.png" alt="Alura Books" class="img-desktop">
+                        <div class="preview">
+                            <a href="https://github.com/IsaErcole/AluraBooks" target="_blank">Preview on GitHub<img src="./img/redirect.png" alt="redirect-site"></a>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <a href="https://isaercole.github.io/AluraBooks/" target="_blank">Check this project</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card">
+                        <h2 class="swiper-tittle">Lista de Compras</h2>
+                        <img src="./img/lista-de-compras.png" alt="Lista de Compras" class="img-mobile">
+                        <img src="./img/lista-de-compras-desktop.png" alt="Lista de Compras" class="img-desktop">
+                        <div class="preview">
+                            <a href="https://github.com/IsaErcole/Lista-de-Compras" target="_blank">Preview on GitHub<img src="./img/redirect.png" alt="redirect-site"></a>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <a href="https://isaercole.github.io/Lista-de-Compras/" target="_blank">Check this project</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card">
+                        <h2 class="swiper-tittle">CodeConnect</h2>
+                        <img src="./img/CodeConnect.png" alt="CodeConnect" class="img-mobile">
+                        <img src="./img/CodeConnect-desktop.png" alt="CodeConnect" class="img-desktop">
+                        <div class="preview">
+                            <a href="https://github.com/IsaErcole/CodeConnect" target="_blank">Preview on GitHub<img src="./img/redirect.png" alt="redirect-site"></a>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <a href="https://isaercole.github.io/CodeConnect/" target="_blank">Check this project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="bullets">
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        
+
+        <!--circular carousel-->
+        <section id="Knowledge">
+            <div>
+                <h2 class="knowledge-tittle">Knowledge</h2>
+                <div class="knowledge-all">
+                    <div class="container">
+                        <p class="knowledge-subtittle" id="dynamicTitle"></p>
+                        <div class="wrapper">
+                            <div class="item" id="box1">
+                                <img src="./img/JS.png" alt="JS" class="item-mobile">
+                                <img src="./img/JS-desktop.png" alt="JS" class="item-desktop">
+                            </div>
+                            <div class="item" id="box2">
+                                <img src="./img/HTML.png" alt="HTML" class="item-mobile">
+                                <img src="./img/HTML-desktop.png" alt="HTML" class="item-desktop">
+                            </div>
+                            <div class="item" id="box3">
+                                <img src="./img/CSS.png" alt="CSS" class="item-mobile">
+                                <img src="./img/CSS-desktop.png" alt="CSS" class="item-desktop">
+                            </div>
+                            <svg viewBox="0 0 300 300">
+                                <circle id="holder" class="st0" cx="151" cy="151" r="150"/>
+                            </svg>
+                        </div>
+                        <!--buttons-->
+                        <div class="container-buttons" style="text-align: center;">
+                            <button id="prev" aria-label="Previous">
+                                <img src="./img/left-arrow.svg" class="left-arrow">
+                            </button>
+                            <button id="next" aria-label="Next">
+                                <img src="./img/right-arrow.svg" class="right-arrow">
+                            </button>
+                        </div>
+                    </div>
+                    <!--about JS,CSS and HTML-->
+                    <div>
+                        <p id="dynamicParagraph" class="knowledge-paragraph"></p>
+                    </div>
+                </div>
+                <!--webdesign apps-->
+                <div class="container-apps">
+                    <p class="apps-paragraph">Apps with regular domain in DEV features</p>
+                    <div class="apps-imgs">
+                        <img src="./img/adobe-xd.svg" alt="Adobe XD" class="app-mobile">
+                        <img src="./img/adobe-xs-desktop.svg" alt="Adobe XD" class="app-desktop">
+                        <div class="vertical-line"></div>
+                        <img src="./img/figma.svg" alt="Figma" class="app-mobile">
+                        <img src="./img/figma-desktop.svg" alt="Figma" class="app-desktop">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--contact-->
+        <section id="contact" class="contact">
+            <div class="contact-circle">
+                <div class="ring-outer">
+                    <div class="inner-ring">
+                        <h2 class="contact-tittle">Contact</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container-contact">
+                <a href="mailto:isabellyercole@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-me">
+                    <img src="./img/mail.svg" alt="Mail" class="contact-img-mobile">
+                    <img src="./img/mail-desktop.svg" alt="Mail" class="contact-img-desktop">
+                    Mail me
+                </a>
+                <a href="./html/curriculum.html" class="contact-me" target="_blank">
+                    <img src="./img/curriculum.svg" alt="Curriculum" class="contact-img-mobile">
+                    <img src="./img/curriculum-desktop.svg" alt="Curriculum" class="contact-img-desktop">
+                    Curriculum
+                </a>
+                <a href="https://github.com/IsaErcole" class="contact-me" target="_blank">
+                    <img src="./img/github.svg" alt="GitHub" class="contact-img-mobile">
+                    <img src="./img/github-desktop.svg" alt="GitHub" class="contact-img-desktop">
+                    GitHub
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+            <div class="footer">
+                <img src="./img/dev.svg" alt="Dev">
+                <p>This website was <br> <span>develop by Isa</span> and <span>Design by Rennan</span>.<br> All rights reserved</p>
+                <img src="./img/design.svg" alt="Design"> 
+            </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/typewriter.js"></script>
+    <script src="./js/carousel.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                slidesPerView: 1,
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                    followFinger: true,
+                },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 1,
+                        spaceBetween: 120,
+                        grabCursor: true,
+                        loop: true,
+                    }
+                }
+            });
+        </script>
+</body>
+
+
+
+</html>
